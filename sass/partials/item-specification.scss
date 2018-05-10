@@ -1,0 +1,125 @@
+.item-specification__title {
+  display: block;
+  position: relative;
+  padding-top: 25px;
+  padding-right: 50px;
+  padding-bottom: 25px;
+  padding-left: 75px;
+  background-color: rgba($color-white, 0.6);
+  text-align: center;
+
+  &::before {
+    position: absolute;
+    content: '';
+    top: 50%;
+    left: 22px;
+    transform: translateY(-50%);
+    background-size: cover;
+
+    @media (min-width: $container-desktop) {
+      top: auto;
+      bottom: 190px;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+  }
+
+  &::after {
+    position: absolute;
+    content: '';
+    top: 50%;
+    right: 15px;
+    transform: translateY(-50%);
+    width: 19px;
+    height: 11px;
+    background: url('../img/arrow-down.png') left top no-repeat;
+    background-size: cover;
+
+    @media (min-width: $container-desktop) {
+      display: none;
+    }
+  }
+
+  @media (min-width: $container-desktop) {
+    width: 365px;
+    height: 365px;
+    border-radius: 50%;
+    padding: 0;
+  }
+}
+
+.choose__item--active > .item-specification__title::after {
+  transform: translateY(-50%) rotate(180deg);
+}
+
+.item-specification__title:hover::after {
+  @media (min-width: $container-desktop) {
+    display: block;
+    width: 345px;
+    height: 345px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border: 1px solid $color-teal;
+    border-radius: 50%;
+    background: none;
+  }
+}
+
+.item-specification__title--trade::before {
+  width: 35px;
+  height: 28px;
+  background: url('../img/icon-trade-mobile.png') left top no-repeat;
+
+  @media (min-width: $container-desktop) {
+    width: 83px;
+    height: 64px;
+    background-image: url('../img/icon-trade-desktop.png');
+  }
+}
+
+.item-specification__title--invest::before {
+  width: 34px;
+  height: 28px;
+  background: url('../img/icon-invest-mobile.png') left top no-repeat;
+
+  @media (min-width: $container-desktop) {
+    width: 79px;
+    height: 66px;
+    background-image: url('../img/icon-invest-desktop.png');
+  }
+}
+
+.item-specification__title--attract::before {
+  width: 30px;
+  height: 36px;
+  background: url('../img/icon-attract-mobile.png') left top no-repeat;
+
+  @media (min-width: $container-desktop) {
+    width: 70px;
+    height: 84px;
+    background-image: url('../img/icon-attract-desktop.png');
+  }
+}
+
+.item-specification__title-text {
+  @media (min-width: $container-desktop) {
+    display: block;
+    padding-top: 210px;
+    font-size: 28px;
+  }
+}
+
+.item-specification__title-text--trade {
+  @media (min-width: $container-desktop) {
+    text-transform: capitalize;
+  }
+}
+
+.item-specification__title-text-cut {
+  @media (min-width: $container-desktop) {
+    display: none;
+  }
+}
+
+

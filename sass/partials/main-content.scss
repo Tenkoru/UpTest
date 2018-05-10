@@ -1,0 +1,12 @@
+.main-content {
+  background-color: $color-main-bg;
+  background-image: url(../img/bg-mobile.jpg);
+  background-position: right top;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  @media (min-width: $screen-tablet) {
+    background-image: url(../img/bg-desktop.png), url(../img/bg-main-desktop.jpg);
+    background-position: right top, right top;
+  }
+}

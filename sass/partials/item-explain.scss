@@ -1,0 +1,41 @@
+.item-explain {
+  @include simple-list;
+  margin-top: 25px;
+  margin-bottom: 20px;
+  font-size: 16px;
+  font-weight: 300;
+  counter-reset: item-explain-counter;
+
+  @media (min-width: $container-desktop) {
+    margin-bottom: 40px;
+  }
+}
+
+.item-explain__item {
+  position: relative;
+  padding-left: 30px;
+  margin-bottom: 15px;
+
+  &::before {
+    position: absolute;
+    left: 0;
+    top: 15px;
+    font-size: 32px;
+    line-height: 0;
+    color: $color-teal;
+    content: counter(item-explain-counter);
+    counter-increment: item-explain-counter;
+  }
+
+  @media (min-width: $container-desktop) {
+    padding-left: 40px;
+  }
+}
+
+.item-explain__description {
+  font-size: 16px;
+
+  @media (min-width: $container-desktop) {
+    font-size: 18px;
+  }
+}

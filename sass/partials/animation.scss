@@ -1,0 +1,79 @@
+@media (min-width: $container-desktop) {
+.choose--active {
+    &~.content {
+      opacity: 1;
+      transition: opacity 2s 1.6s;
+    }
+    &.choose {
+      top: -586px;
+      transition: top 1.5s;
+    }
+
+    & .item-specification__title {
+      animation: hide-choose 2s;
+      animation-fill-mode: forwards;
+    }
+
+    & .item-specification__title::after,
+      .item-specification__title::before {
+      opacity: 0;
+      transition: opacity 1s;
+    }
+
+    & .item-specification__title-text {
+      opacity: 0;
+      transition: opacity 1s 1.5s;
+    }
+  }
+  .main-content--active {
+    animation: change-bg 2s forwards;
+  }
+}
+
+@media (max-width: $container-desktop) {
+  .main-content--active {
+    animation: change-bg-mobile 2s forwards;
+  }
+  .content__item--active {
+    animation: show-content-mobile 1s forwards;
+  }
+}
+
+@keyframes change-bg-mobile {
+  50% {
+    background-color: $color-white;
+    background-image: none;
+  }
+  100% {
+    background-color: $color-main-bg;
+    background-image: none;
+  }
+}
+@keyframes hide-choose {
+  100% {
+    background-color: transparent;
+  }
+}
+
+@keyframes change-bg {
+  0% {
+    background-color: $color-white;
+  }
+  50% {
+    background-color: $color-white;
+    background-image: none;
+  }
+  100% {
+    background-image: url('../img/bg-main-desktop.jpg');
+  }
+}
+
+@keyframes show-content-mobile {
+  50% {
+    background-image: none;
+  }
+  100% {
+    display: block;
+    background: url('../img/bg-main-mobile.png') bottom no-repeat;
+  }
+}

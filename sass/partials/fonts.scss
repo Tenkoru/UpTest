@@ -1,0 +1,23 @@
+@font-face {
+    font-family: 'PF DinText Pro';
+    src: url('../fonts/PFDinTextPro-Regular.woff2') format('woff2'),
+        url('../fonts/PFDinTextPro-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'PF DinText Pro';
+    src: url('../fonts/PFDinTextPro-Light.woff2') format('woff2'),
+        url('../fonts/PFDinTextPro-Light.woff') format('woff');
+    font-weight: 300;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'PF DinText Pro';
+    src: url('../fonts/PFDinTextPro-Medium.woff2') format('woff2'),
+        url('../fonts/PFDinTextPro-Medium.woff') format('woff');
+    font-weight: 500;
+    font-style: normal;
+}
